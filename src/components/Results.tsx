@@ -8,7 +8,7 @@ interface Props {
   contestants: Contestant[];
   loading: boolean;
   onRemove: (id: string) => Promise<void>;
-}
+}  
 
 export default function Results({ sessions, contestants, loading, onRemove }: Props) {
   const [search, setSearch] = useState("");
