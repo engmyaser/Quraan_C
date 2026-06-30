@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --emerald: #0f6b4f;
+  --emerald-light: #16a34a;
+  --gold: #c9a227;
+  --gold-light: #e6c558;
+  --cream: #f8f5ec;
+  --ink: #1a2e23;
+}
+
+* {
+  font-family: "Cairo", system-ui, sans-serif;
+}
+
+body {
+  direction: rtl;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.font-quran {
+  font-family: "Amiri", serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e8e2d0;
+}
+::-webkit-scrollbar-thumb {
+  background: #b8a96e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9a8a52;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-scale-in {
+  animation: scaleIn 0.25s ease-out;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #e8e2d0 25%, #f0ebda 50%, #e8e2d0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Pattern background */
+.pattern-bg {
+  background-color: #0f6b4f;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(201, 162, 39, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(22, 163, 74, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(201, 162, 39, 0.1) 0%, transparent 50%);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 24px -8px rgba(15, 107, 79, 0.15), 0 2px 8px -4px rgba(0, 0, 0, 0.08);
+}
+
+.card-shadow-lg {
+  box-shadow: 0 12px 40px -12px rgba(15, 107, 79, 0.25), 0 4px 16px -8px rgba(0, 0, 0, 0.1);
+}
