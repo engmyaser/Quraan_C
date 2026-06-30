@@ -33,7 +33,7 @@ function App() {
   const [view, setView] = useState<View>("dashboard");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showWelcome, setShowWelcome] = useState(() => !sessionStorage.getItem("qc_welcome_seen"));
-
+  
   const contestantsHook = useContestants();
   const judgesHook = useJudges();
   const sessionsHook = useSessions();
